@@ -13,6 +13,8 @@
     }
   },
   "require"    : {
-    "consigliere/gaboot": "0.1.*"
+    "consigliere/appfoundation" : "0.1.*",
+    "tcg/voyager"               : "0.11.*",
+    "laravel/passport"          : "^2.0"
   }
 }
