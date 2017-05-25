@@ -58,7 +58,7 @@ class SettingsTableSeeder extends Seeder
         if (!$setting->exists) {
             $setting->fill([
                 'display_name' => 'Admin Title',
-                'value'        => 'Gaboot',
+                'value'        => 'Onsigbaar',
                 'details'      => '',
                 'type'         => 'text',
                 'order'        => 4,
@@ -68,7 +68,7 @@ class SettingsTableSeeder extends Seeder
         $setting = $this->findSetting('admin_description');
         if (!$setting->exists) {
             $setting->fill([
-                'display_name' => 'Gaboot',
+                'display_name' => 'Onsigbaar',
                 'value'        => 'Description',
                 'details'      => '',
                 'type'         => 'text',
