@@ -60,4 +60,9 @@ class OnsigbaarController extends Controller
     public function destroy()
     {
     }
+
+    public function oauth2() 
+    {
+        return view('onsigbaar::oauth2');
+    }
 }
