@@ -1,4 +1,4 @@
-@extends('gaboot::layouts.master')
+@extends('onsigbaar::layouts.oauth2')
 
 @section('content')
     <h1>Register</h1>
