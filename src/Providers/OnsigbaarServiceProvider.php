@@ -32,13 +32,8 @@ class OnsigbaarServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->register(\App\Components\AppFoundation\Providers\AppFoundationServiceProvider::class);
-
-        // register voyagers
-        $this->app->register(\TCG\Voyager\VoyagerServiceProvider::class);
-
-        // register passport
-        $this->app->register(\Laravel\Passport\PassportServiceProvider::class);
+        $this->app->register(\App\Components\Signature\Providers\SignatureServiceProvider::class);
+        $this->app->register(\App\Components\Assign\Providers\AssignServiceProvider::class);
     }
 
     /**
