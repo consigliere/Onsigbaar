@@ -23,6 +23,8 @@ class OnsigbaarServiceProvider extends ServiceProvider
         $this->registerTranslations();
         $this->registerConfig();
         $this->registerViews();
+
+        $this->loadMigrationsFrom(__DIR__ . '/../../Database/Migrations');
     }
 
     /**
@@ -33,7 +35,7 @@ class OnsigbaarServiceProvider extends ServiceProvider
     public function register()
     {
         $this->app->register(\App\Components\Signature\Providers\SignatureServiceProvider::class);
-        $this->app->register(\App\Components\Siegnor\Providers\AssignServiceProvider::class);
+        $this->app->register(\App\Components\Siegnor\Providers\SiegnorServiceProvider::class);
     }
 
     /**
@@ -44,10 +46,10 @@ class OnsigbaarServiceProvider extends ServiceProvider
     protected function registerConfig()
     {
         $this->publishes([
-            __DIR__.'/../../Config/config.php' => config_path('onsigbaar.php'),
-        ]);
+            __DIR__ . '/../../Config/config.php' => config_path('onsigbaar.php'),
+        ], 'config-onsigbaar');
         $this->mergeConfigFrom(
-            __DIR__.'/../../Config/config.php', 'onsigbaar'
+            __DIR__ . '/../../Config/config.php', 'onsigbaar'
         );
     }
 
@@ -60,10 +62,10 @@ class OnsigbaarServiceProvider extends ServiceProvider
     {
         $viewPath = base_path('resources/views/components/onsigbaar');
 
-        $sourcePath = __DIR__.'/../../Resources/views';
+        $sourcePath = __DIR__ . '/../../Resources/views';
 
         $this->publishes([
-            $sourcePath => $viewPath
+            $sourcePath => $viewPath,
         ]);
 
         $this->loadViewsFrom(array_merge(array_map(function ($path) {
@@ -83,7 +85,7 @@ class OnsigbaarServiceProvider extends ServiceProvider
         if (is_dir($langPath)) {
             $this->loadTranslationsFrom($langPath, 'onsigbaar');
         } else {
-            $this->loadTranslationsFrom(__DIR__ .'/../../Resources/lang', 'onsigbaar');
+            $this->loadTranslationsFrom(__DIR__ . '/../../Resources/lang', 'onsigbaar');
         }
     }
 
