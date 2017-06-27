@@ -13,7 +13,7 @@
     }
   },
   "require"    : {
-    "consigliere/signature": "0.3.*",
+    "consigliere/signature": "0.2.*",
     "consigliere/siegnor"  : "0.3.*"
   }
 }
