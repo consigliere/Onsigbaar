@@ -13,9 +13,9 @@
     }
   },
   "require"    : {
-    "illuminate/support"   : "5.1.*|5.2.*|5.3.*|5.4.*",
-    "illuminate/contracts" : "5.1.*|5.2.*|5.3.*|5.4.*",
-    "consigliere/signature": "0.2.*",
-    "consigliere/siegnor"  : "0.3.*"
+    "illuminate/support"   : "5.5.*",
+    "illuminate/contracts" : "5.5.*",
+    "consigliere/signature": "0.3.*",
+    "consigliere/siegnor"  : "0.4.*"
   }
 }
