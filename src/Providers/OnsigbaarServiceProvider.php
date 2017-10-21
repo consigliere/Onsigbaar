@@ -36,7 +36,6 @@ class OnsigbaarServiceProvider extends ServiceProvider
     {
         $this->app->register(\App\Components\Signature\Providers\SignatureServiceProvider::class);
         $this->app->register(\App\Components\Siegnor\Providers\SiegnorServiceProvider::class);
-        $this->app->register(\Optimus\ApiConsumer\Provider\LaravelServiceProvider::class);
     }
 
     /**
