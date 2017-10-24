@@ -36,7 +36,7 @@ class OnsigbaarServiceProvider extends ServiceProvider
     {
         $this->app->register(\App\Components\Signature\Providers\SignatureServiceProvider::class);
         $this->app->register(\App\Components\Passerby\Providers\PasserbyServiceProvider::class);
-        $this->app->register(\App\Components\Siegnor\Providers\SiegnorServiceProvider::class);
+        $this->app->register(\App\Components\Signal\Providers\SignalServiceProvider::class);
     }
 
     /**
