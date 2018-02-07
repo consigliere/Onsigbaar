@@ -17,7 +17,7 @@
     "illuminate/contracts" : "5.5.*",
     "consigliere/signature": "0.4.*",
     "consigliere/siegnor"  : "0.4.*",
-    "consigliere/signal"   : "0.3.*",
+    "consigliere/signal"   : "0.4.*",
     "consigliere/passerby" : "0.2.*"
   }
 }
